@@ -1,0 +1,41 @@
+{
+  "name": "@warrenbrasil/open-trace",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.json",
+    "prepublishOnly": "yarn test && yarn build",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^0.5.0",
+    "@opentelemetry/exporter-jaeger": "^0.5.0",
+    "@opentelemetry/node": "^0.5.0",
+    "@opentelemetry/plugin-http": "^0.5.0",
+    "@opentelemetry/plugin-https": "^0.5.0",
+    "@opentelemetry/plugin-ioredis": "^0.5.0",
+    "@opentelemetry/plugin-mongodb": "^0.5.0",
+    "@opentelemetry/tracing": "^0.5.0"
+  },
+  "jest": {
+    "automock": true,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "rootDir": "src",
+    "testMatch": [
+      "<rootDir>/**/*.test.ts"
+    ],
+    "coverageDirectory": "../coverage",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/**/*.ts"
+    ]
+  }
+}

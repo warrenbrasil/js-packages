@@ -1,0 +1,22 @@
+{"compilerOptions": {
+"resolveJsonModule": true,
+"target": "es2019",
+"module": "commonjs",
+"declaration": true,
+"declarationMap": true,
+"sourceMap": true,
+"composite": true,
+"strict": true,
+"noImplicitAny": true,
+"strictNullChecks": true,
+"strictFunctionTypes": true,
+"strictBindCallApply": true,
+"strictPropertyInitialization": true,
+"noImplicitThis": true,
+"alwaysStrict": true,
+"noUnusedLocals": true,
+"noUnusedParameters": false,
+"noImplicitReturns": true,
+"noFallthroughCasesInSwitch": true,
+"forceConsistentCasingInFileNames": true
+}}
